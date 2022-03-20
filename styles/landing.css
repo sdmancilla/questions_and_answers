@@ -1,0 +1,67 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background: url("../images/bg.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
+
+.bg {
+    text-align: center;
+    color: #fff;
+    margin: 40px auto;
+    background-color: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 32px;
+    backdrop-filter: blur(10px);
+}
+
+.btn-ini {
+    display: inline-block;
+    padding: 24px 32px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition-duration: 200ms;
+}
+
+.btn-ini:hover {
+    background-color: rgba(255, 255, 255, 0.253);
+    transition-duration: 200ms;
+}
+
+h1 {
+    min-height: 80px;
+    width: 90%;
+    max-width: 700px;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #fff;
+    padding-top: 60px;
+    color: rgba(255,255,255,0.8);
+}
+
+p {
+    font-size: 20px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: rgba(255,255,255,0.6);
+  }

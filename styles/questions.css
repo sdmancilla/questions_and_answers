@@ -1,0 +1,45 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background: url("../images/questions_image.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+
+.bg {
+    text-align: center;
+    color: #fff;
+    margin: 40px auto;
+    background-color: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 32px;
+    backdrop-filter: blur(10px);
+}
+
+a {
+    display: inline-block;
+    padding: 12px 16px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition-duration: 200ms;
+}
+
+.a-back:hover {
+    background-color: rgba(214, 111, 111, 0.658);
+    transition-duration: 200ms;
+}
