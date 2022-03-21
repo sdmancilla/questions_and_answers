@@ -32,7 +32,7 @@ const questions = [
             'Esta menos'
         ],
         correct: 0,
-        difficulty: 'Imposible'
+        difficulty: 'impossible'
     }
 ]
 

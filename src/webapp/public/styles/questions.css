@@ -39,6 +39,20 @@ a {
     transition-duration: 200ms;
 }
 
+span.incorrect {
+    background-color: violet;
+}
+
+span.correct{
+    background-color: green;
+}
+
+a.disable {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+}
+
 .a-back:hover {
     background-color: rgba(214, 111, 111, 0.658);
     transition-duration: 200ms;

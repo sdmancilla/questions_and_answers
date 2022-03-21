@@ -20,6 +20,9 @@ app.use('/settings', settings)
 const questions = require('./routes/questions');
 app.use('/questions', questions)
 
+const endgame = require('./routes/endgame');
+app.use('/endgame', endgame)
+
 //Routes
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "../webapp/public/views/index.html"))

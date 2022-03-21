@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const data = require('../data')
-const path = require('path');
 
 router.post('/', async(req, res) => {
     const {question, answer} = req.body;
@@ -9,7 +8,7 @@ router.post('/', async(req, res) => {
     if (item.answers[item.correct] == answer) {
         res.json({correct: true});
     } else {
-        res.json({correct: false});
+        res.json({correct: false, correctIndex: item.correct});
     }
 })
 
@@ -17,9 +16,8 @@ router.get('/:difficult', async(req, res) => {
     const {difficult} = req.params;
     const {questions} = data;
     const level_questions = questions.filter(question => question.difficulty == difficult)
-    res.json({
-        question: level_questions[Math.random()*level_questions.length]
-    })
+    console.log(level_questions)
+    res.json(level_questions[Math.floor(Math.random()*level_questions.length)])
 })
 
 module.exports = router;
