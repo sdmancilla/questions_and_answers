@@ -12,7 +12,7 @@ const questions = [
         difficulty: 'easy'
     },
     {
-        question: '¿Cuántos líderes sociales caben en un cajón?',
+        question: '¿Cuántos gatos caben en un cajón de 3 posiciones?',
         answers: ['1', '2', '3', '4'],
         correct: 1,
         difficulty: 'medium'
@@ -26,10 +26,10 @@ const questions = [
     {
         question: 'Complete la oración: Soy',
         answers: [
-            'Gay',
+            'Una buena persona',
             'Esta no es',
             'Esta tampoco',
-            'Lustrador de pitos a domicilio'
+            'Esta menos'
         ],
         correct: 0,
         difficulty: 'Imposible'
@@ -37,7 +37,7 @@ const questions = [
 ]
 
 const history = [
-    
+
 ]
 
 module.exports = { questions, history };
