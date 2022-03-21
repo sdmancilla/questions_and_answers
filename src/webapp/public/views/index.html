@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/landing.css">
+    <title>Start</title>
+</head>
+<body>
+    <header>
+        <a href="settings" class="btn-ini btn-config">Config</a>
+    </header>
+
+    <main>
+        <div class="bg">
+            <h1>Welcome to the test</h1>
+            <p>
+                Now, you will see a serie of questions which you have to answer.
+                <br>Each question you win, it'll turning more difficult. So, good luck!
+            </p>
+            <input type="text" autocomplete="off" id="username" required placeholder="Type your name">
+            <a href="questions" id="start" class="btn-ini">Beggin test</a>
+            <p class="warning hidden">* You must type a valid name</p>
+        </div>
+    </main>
+    <script>
+        const start = document.getElementById("start");
+        const warning = document.querySelector(".warning");
+        start.addEventListener("click", (event) => {
+            event.preventDefault();
+            const username = document.getElementById("username")
+            if (username.value != "") {
+                localStorage.setItem("player", JSON.stringify({
+                    username: username.value,
+                    score: 0,
+                    status: "",
+                    difficult: "begginer"
+                }));
+                location.replace(start.href)
+            } else {
+                warning.classList.remove("hidden")
+            }
+        })
+    </script>
+</body>
+</html>
