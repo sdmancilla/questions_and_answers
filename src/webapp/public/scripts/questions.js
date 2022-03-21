@@ -4,6 +4,8 @@ const answers_labels = document.querySelectorAll("span")
 const difficulties = ["begginer", "easy", "medium", "hard", "impossible"]
 const next_button = document.getElementById("next")
 const finish_button = document.getElementById("finish")
+const username = document.getElementById("username")
+const score = document.getElementById("score")
 
 answers.forEach((answer, index) => {
     answer.addEventListener("click", async () => {
@@ -58,14 +60,16 @@ finish_button.addEventListener("click", () => {
 })
 
 window.onload = async () => {
-    const difficulty = JSON.parse(localStorage.getItem("player")).difficult;
-    const response = await fetch(`/questions/${difficulty}`);
+    const user = JSON.parse(localStorage.getItem("player"));
+    const response = await fetch(`/questions/${user.difficult}`);
     const result = await response.json();
     question.innerText = result.question;
     for (let i = 0; i < result.answers.length; i++) {
         answers_labels[i].innerText = result.answers[i];
         answers[i].value = result.answers[i];
     }
+    username.innerText = `User: ${user.username}`;
+    score.innerText = `Score: ${user.score}`;
 }
 
 function finishGame(message) {
