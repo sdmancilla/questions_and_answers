@@ -4,6 +4,6 @@ window.onload = async () => {
     const user = document.querySelector(".statistics > h2");
     const performance = document.querySelector(".statistics > p");
     status.innerText = message;
-    user.innerText = username;
-    performance.innerText = score;
+    user.innerText = `Username: ${username}`;
+    performance.innerText = `Score: ${score}`;
 }

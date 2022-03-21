@@ -8,14 +8,13 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
 }
 
 .bg {
     text-align: center;
     color: #fff;
     margin: 40px auto;
-    background-color: rgba(255,255,255,0.06);
+    background-color: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 15px;
     padding: 32px;
@@ -39,12 +38,9 @@ a {
     transition-duration: 200ms;
 }
 
-span.incorrect {
-    background-color: violet;
-}
-
-span.correct{
-    background-color: green;
+a.btn-ini {
+    margin: 30px 60px;
+    width: 120px;
 }
 
 a.disable {
@@ -53,7 +49,50 @@ a.disable {
     opacity: 0.5;
 }
 
+.a-back {
+    border: solid 1px rgba(0, 0, 0, 0.226);
+}
+
 .a-back:hover {
     background-color: rgba(214, 111, 111, 0.658);
     transition-duration: 200ms;
+}
+
+.answers span {
+    padding: 10px 200px 10px 200px;
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color: rgba(88, 71, 71, 0.411);
+    border: 1px solid rgba(14, 5, 6, 0.753);
+    cursor: pointer;
+}
+
+.answers span:hover {
+    padding: 15px 210px 15px 210px;
+    background-color: rgba(114, 102, 102, 0.411);
+}
+
+.answers input {
+    visibility: hidden;
+    margin: 20px 0px;
+    width: 0px;
+}
+
+span.incorrect {
+    padding: 10px 200px 10px 200px;
+    border-color: white;
+    background-color: rgba(255, 0, 0, 0.658);
+    font-weight: bold;
+    transition: 1s;
+}
+
+span.correct{
+    padding: 10px 200px 10px 200px;
+    border-color: rgb(240, 205, 7);
+    background-color: rgb(45, 206, 39);
+    color: black;
+    font-weight: bold;
+    transition: 1s;
 }
