@@ -10,60 +10,74 @@
 </head>
 <body>
     <header>
-        <a class="a-back" href="/">Go back</a>
+        <a class="a-back" href="/">Back</a>
+        <span>Add Questions</span>
+        <a class="a-ok" href="/">Ok</a>
     </header>
     <main>
-        <form id="form" autocomplete="off" action="/settings" method="post">
-            <label for="question">Question</label><br>
-            <input type="text" name="question" id="question">
-            <div class="answer">
-                <label for="answer-1">Answer 1</label>
-                <input type="text" name="answer-1">
-                <input type="radio" name="correct" class="correct">
-            </div>
-            <br>
-            <div class="answer">
-                <label for="answer-2">Answer 2</label>
-                <input type="text" name="answer-2">
-                <input type="radio" name="correct" class="correct">
-            </div>
-            <br>
-            <div class="answer">
-                <label for="answer-3">Answer 3</label>
-                <input type="text" name="answer-3">
-                <input type="radio" name="correct" class="correct">
-            </div>
-            <br>
-            <div class="answer">
-                <label for="answer-4">Answer 4</label>
-                <input type="text" name="answer-4">
-                <input type="radio" name="correct" class="correct">
-            </div>
-            <label for=""></label>
-            <div>
-                <label>
-                    <input type="radio" name="difficulty" class="difficulty" value="begginer">
-                    Begginer
+        <div class="bg">
+            <form id="form" autocomplete="off" action="/settings" method="post">
+                <label class="question">
+                    <input type="text" name="question" id="question" placeholder="Question" required>
                 </label>
-                <label>
-                    <input type="radio" name="difficulty" class="difficulty" value="easy">
-                    Easy
-                </label>
-                <label>
-                    <input type="radio" name="difficulty" class="difficulty" value="medium">
-                    Medium
-                </label>
-                <label>
-                    <input type="radio" name="difficulty" class="difficulty" value="hard">
-                    Hard
-                </label>
-                <label>
-                    <input type="radio" name="difficulty" class="difficulty" value="Imposible">
-                    Imposible
-                </label>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
+                <div class="answer">
+                    <label>
+                        <input type="text" name="answer-1" placeholder="Answer 1" required>
+                        <input type="radio" name="correct" class="option" required>
+                    </label>
+                </div>
+                <br>
+                <div class="answer">
+                    <label>
+                        <input type="text" name="answer-2" placeholder="Answer 2" required>
+                        <input type="radio" name="correct" class="option" required>
+                    </label>
+                </div>
+                <br>
+                <div class="answer">
+                    <label>
+                        <input type="text" name="answer-3" placeholder="Answer 3" required>
+                        <input type="radio" name="correct" class="option" required>
+                    </label>
+                </div>
+                <br>
+                <div class="answer">
+                    <label>
+                        <input type="text" name="answer-4" placeholder="Answer 4" required>
+                        <input type="radio" name="correct" class="option" required>
+                    </label>
+                </div>
+                <div class="difficulty">
+                    <div>
+                        <span>Difficulty</span>
+                    </div>
+                    <div class="difficulty-icons">
+                        <label>
+                            <input type="radio" name="difficulty" class="difficulty" value="begginer">
+                            <div class="icon begginer"><img src="/static/images/begginer.png" alt="begginer icon"></div>
+                        </label>
+                        <label>
+                            <input type="radio" name="difficulty" class="difficulty" value="easy">
+                            <div class="icon easy"><img src="/static/images/easy.png" alt="easy icon"></div>
+                        </label>
+                        <label>
+                            <input type="radio" name="difficulty" class="difficulty" value="medium">
+                            <div class="icon medium"><img src="/static/images/medium.png" alt="medium icon"></div>
+                        </label>
+                        <label>
+                            <input type="radio" name="difficulty" class="difficulty" value="hard">
+                            <div class="icon hard"><img src="/static/images/hard.png" alt="hard icon"></div>
+                        </label>
+                        <label>
+                            <input type="radio" name="difficulty" class="difficulty" value="Impossible">
+                            <div class="icon impossible"><img src="/static/images/impossible.png" alt="impossible icon"></div>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="submit">Create question</button>
+                <div id="success" class="success">Question added successfully!</div>
+            </form>
+        </div>
     </main>
 </body>
 </html>

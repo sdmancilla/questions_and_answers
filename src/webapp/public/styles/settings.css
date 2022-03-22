@@ -1,0 +1,272 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background: url("../images/settings_image.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header {
+    height: 60px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+header .a-ok {
+    position: absolute;
+    right: 10px;
+    background-color: rgba(101, 206, 87, 0.411);
+    border: solid 1px rgba(114, 255, 133, 0.226);
+}
+
+header .a-back {
+    position: absolute;
+    left: 10px;
+    background-color: rgba(43, 128, 238, 0.411);
+    border: solid 1px rgba(43, 88, 235, 0.226);
+}
+
+header .a-ok:hover {
+    padding: 15px 15px 15px 15px;
+    background-color: rgba(44, 243, 18, 0.692);
+}
+
+header .a-back:hover {
+    padding: 15px 15px 15px 15px;
+    background-color: rgba(233, 17, 17, 0.692);
+}
+
+header span{
+    font-size: 40px;
+    font-weight: 800;
+    -webkit-text-stroke: 2px black;
+    color: white; 
+    display: inline-block;
+    margin-top: 10px;
+}
+
+a {
+    display: inline-block;
+    padding: 12px 16px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition-duration: 200ms;
+}
+
+.bg {
+    text-align: center;
+    color: #fff;
+    margin: 15px auto 0px auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 32px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+#question {
+    text-align: center;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.answer {
+    height: 34px;
+}
+
+.answer label input{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.answer label{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+	margin-bottom: 20px;
+	padding:5px 0 5px 0px;
+}
+
+.answer label .option {
+    border: solid 2px black;
+    height: 30px;
+    width: 30px;
+    margin: 7px 0 0 0;
+    border-radius: 100%;
+}
+
+.answer label input {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 60%;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.answer label input::placeholder {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.difficulty {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.difficulty-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.difficulty label div{
+    cursor: pointer;
+    display: inline-block;
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.difficulty span {
+    display: block;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+
+.difficulty label input {
+    visibility: hidden;
+	position: absolute;
+	right: 0;
+    cursor: pointer;
+}
+
+.difficulty label input:checked ~ div{
+    border: solid 3px white;
+}
+
+.icon.begginer, .icon.easy, .icon.medium, .icon.hard, .icon.impossible{
+    display: flex;
+}
+
+.submit {
+    display: inline-block;
+    padding: 24px 32px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition-duration: 200ms;
+}
+
+.submit:hover {
+    background-color: rgba(27, 235, 27, 0.404);
+    transition-duration: 200ms;
+}
+
+
+.success.visible {
+    color: rgb(0, 255, 21);
+    transition-duration: 1000ms;
+}
+
+.success {
+    color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 2px;
+    font-size: 15px;
+    transition-duration: 7000ms;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    form, #question, .answer label input {
+        width: 100%;
+    }
+    header .a-back {
+        left: auto;
+        right: 70px;
+        background-color: rgba(170, 40, 40, 0.692);
+        border-color: rgba(185, 87, 87, 0.712);
+    }
+    header span{
+        margin-top: 40px;
+    }
+    .success.visible {
+        color: white;
+        transition-duration: 1000ms;
+    }
+    .difficulty label div {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+    .icon.begginer {
+        background-color: rgb(0, 214, 252);
+    }
+    .icon.easy {
+        background-color: rgb(30, 255, 0);
+    }
+    .icon.medium {
+        background-color: rgb(253, 249, 0);
+    }
+    .icon.hard {
+        background-color: rgb(255, 153, 0);
+    }
+    .icon.impossible {
+        background-color: rgb(207, 0, 0)
+    }
+    .difficulty label input:checked ~ div{
+        background-image: none;
+        border: solid 2px white;
+    }
+}
